@@ -27,7 +27,10 @@ function item:init()
         ["kris"] = 10,
         ["susie"] = 120,
         ["ralsei"] = 120,
-        ["noelle"] = 70
+        ["noelle"] = 70,
+        ["alexa"] = 60, --placeholder
+        ["knight"] = 60, --placeholder
+        ["jevil"] = 60, --placeholder
     }
 
     -- Default shop price (sell price is halved)

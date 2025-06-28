@@ -150,6 +150,8 @@ function character:init()
 
     -- Message shown on gameover (optional)
     self.gameover_message = nil
+
+    self.leader_desc = "Uses the Red SOUL in combat, standard SOUL movement.\nParty can get stronger when defeating enemies with violence."
 end
 
 function character:onLevelUp(level)
