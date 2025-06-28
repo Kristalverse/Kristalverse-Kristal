@@ -14,7 +14,7 @@ function character:init()
     -- Display level (saved to the save file)
     self.level = 2
     -- Default title / class (saved to the save file)
-    self.title = "Deoxynn victim\nFears will drive\nher to insanity."
+    self.title = "D. victim\nFears will drive\nher to insanity."
 
     -- Determines which character the soul comes from (higher number = higher priority)
     self.soul_priority = 2
@@ -139,11 +139,9 @@ function character:drawPowerStat(index, x, y, menu)
 			icon = Assets.getTexture("ui/menu/icon/sword")
 		end
         love.graphics.draw(icon, x-26, y+6, 0, 2, 2)
-			love.graphics.print(Game:getFlag("Route_B", "Sane"), x, y)
+		love.graphics.print(Game:getFlag("Route_B", "Sane"), x, y)
         return true
     end
 end
-
-function character:getTitle() return self.title end
 
 return character
