@@ -30,8 +30,8 @@ function PartySwapMenu:init()
     self.state = "SELECTING"
     self.page = 1
     
-    self.leaders = Game:getFlag("unlocked_leaders")
-    self.members = Game:getFlag("unlocked_members")
+    self.leaders = Game:getFlag("unlocked_leaders", {})
+    self.members = Game:getFlag("unlocked_members", {})
 end
 
 function PartySwapMenu:draw()
