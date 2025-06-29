@@ -2,7 +2,7 @@
 local item, super = Class(Item, "poisonous_potato")
 
 function item:init()
-    super:init(self)
+    super.init(self)
 
      -- Display name
     self.name = "P. POTATO"

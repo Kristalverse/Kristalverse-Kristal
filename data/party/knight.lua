@@ -1,7 +1,7 @@
 local Knight, super = Class(PartyMember)
 
 function Knight:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "The Knight"
     self:setActor("knight")

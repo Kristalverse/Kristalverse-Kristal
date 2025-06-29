@@ -50,7 +50,17 @@ function Loading:beginLoad()
     self.loading = true
     self.load_complete = false
 
+    local paths = {}
     Kristal.loadAssets("", "all", "")
+	for _, name in ipairs(love.filesystem.getDirectoryItems("sharedlibs")) do
+        local lib_full_path = "sharedlibs/"..name
+        if love.filesystem.getInfo(lib_full_path .. "/lib.json") then
+            local data = JSON.decode(love.filesystem.read(lib_full_path.."/lib.json"))
+            if data.preload_assets then
+                Kristal.loadAssets(lib_full_path, "all", "")
+            end
+        end
+    end
     Kristal.loadAssets("", "mods", "", function ()
         self.loading = false
         self.load_complete = true

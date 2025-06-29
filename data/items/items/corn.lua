@@ -2,7 +2,7 @@
 local item, super = Class(HealItem, "corn")
 
 function item:init()
-    super:init(self)
+    super.init(self)
 
      -- Display name
     self.name = "Corn"
